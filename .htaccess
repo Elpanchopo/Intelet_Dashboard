@@ -1,0 +1,9 @@
+# Habilitar el módulo de reescritura
+RewriteEngine On
+
+# Redireccionar el directorio BASE_DASHBOARD hacia "views"
+RewriteRule ^base_dashboard/?$ /base_dashboard/views [L,R=301]
+
+# Denegar acceso directo a todos los archivos y carpetas, excepto a "views" y "assets"
+RewriteCond %{REQUEST_URI} !^/base_dashboard/(views|assets)/ [NC]
+RewriteRule ^base_dashboard/ - [F]
