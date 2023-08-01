@@ -41,16 +41,25 @@
         <a href="consumer.php" data-title="Projects">Consumer</a>
       </li>
       <li>
-        <a href="#" data-title="Proyects">Entel</a>
+        <a href="entel.php" data-title="Proyects">Entel</a>
       </li>
       <li>
-        <a href="#" data-title="Timeline">Ruta 78</a>
+        <a href="forum.php" data-title="Proyects">Forum</a>
       </li>
       <li>
-        <a href="#" data-title="Settings">Ruta del maipo</a>
+        <a href="globalvia.php" data-title="Proyects">Globalvia</a>
       </li>
       <li>
-        <a href="#" data-title="Search"></a>
+        <a href="salcobran.php" data-title="Proyects">Salcobrand</a>
+      </li>
+      <li>
+        <a href="rutamaipo.php" data-title="Proyects">Ruta del maipo</a>
+      </li>
+      <li>
+        <a href="santander.php" data-title="Proyects">Santander</a>
+      </li>
+      <li>
+        <a href="abcdin.php" data-title="Proyects">Abcdin</a>
       </li>
     </ul>
   </nav>
