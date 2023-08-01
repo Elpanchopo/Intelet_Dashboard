@@ -1,5 +1,5 @@
 <?php
 // Redireccionar a la carpeta "views"
-header("Location: /base_dashboard/views");
+header("Location: /Intelet_Dashboard/views");
 exit;
 ?>

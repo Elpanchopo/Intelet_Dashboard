@@ -118,7 +118,7 @@
           <div class="table-responsive">
 
             <?php 
-              $json_data = getTablaGestionesEjecutivosHora(); // Traigo el json de la consulta
+              $json_data = getTablaGestionesEjecutivosHora2(); // Traigo el json de la consulta
               
               $datos = json_decode($json_data, true);
 
@@ -199,7 +199,7 @@
                 
                 <!-- javascript que genera grafico 2 -->
                 <script>
-                  var datos = <?php getTipoGestionesEjecutivos(); ?>;
+                  var datos = <?php getTipoGestionesEjecutivos2(); ?>;
                   // parametros del constructor:
                   //datos, etiquetas, valores, id canvas, titulo del grafico, eje x, eje y
                   var g2 = new Grafico(datos, datos.map(obj => obj.tg), datos.map(obj => obj.total), 'miGrafico2', 'Gestiones realizadas', 'Tipos de gestion', 'Gestiones realizadas');
@@ -218,10 +218,10 @@
           <div class="table-responsive">
             
           <?php 
-              $json_data = getTablaTGDiarioTotal(); // Traigo el json de la consulta
+              $json_data = getTablaTGDiarioTotal2(); // Traigo el json de la consulta
               $datos = json_decode($json_data, true);
 
-              $json_data = getTablaTGDiarioSumTotal(); // Traigo el json de la consulta totales por TG
+              $json_data = getTablaTGDiarioSumTotal2(); // Traigo el json de la consulta totales por TG
               $datosTG = json_decode($json_data, true);
               if (!empty($datos)) {
                 
