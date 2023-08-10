@@ -4,7 +4,7 @@ require_once __DIR__ . '/../controllers/common.php';
 //AVN
 //Funciones gestiones AVN
 function getGestionesEjecutivosHora() {
-    $query = "SELECT * FROM v_grx_gestionEjeHora order by 1";
+    $query = "SELECT * FROM v_grx_gestionejehora order by 1";
     echo getJsonData($query, 1);
 }
 
@@ -32,7 +32,7 @@ function getTablaTGDiarioSumTotal(){
 // Consumer
 //funciones gestiones consumer
 function getGestionesEjecutivosHora2() {
-    $query = "SELECT * FROM v_grx_gestionEjeHora order by 1";
+    $query = "SELECT * FROM v_grx_gestionejehora order by 1";
     echo getJsonData($query, 2);
 }
 
@@ -60,7 +60,7 @@ function getTablaTGDiarioSumTotal2(){
 // Entel
 //funciones gestiones Entel
 function getGestionesEjecutivosHora3() {
-    $query = "SELECT * FROM v_grx_gestionEjeHora order by 1";
+    $query = "SELECT * FROM v_grx_gestionejehora order by 1";
     echo getJsonData($query, 3);
 }
 
@@ -88,7 +88,7 @@ function getTablaTGDiarioSumTotal3(){
 // Forum
 //funciones gestiones Forum
 function getGestionesEjecutivosHora4() {
-    $query = "SELECT * FROM v_grx_gestionejeHora order by 1";
+    $query = "SELECT * FROM v_grx_gestionejehora order by 1";
     echo getJsonData($query, 4);
 }
 
@@ -116,7 +116,7 @@ function getTablaTGDiarioSumTotal4(){
 // Globalvia
 //funciones gestiones Globalvia
 function getGestionesEjecutivosHora5() {
-    $query = "SELECT * FROM v_grx_gestionEjeHora order by 1";
+    $query = "SELECT * FROM v_grx_gestionejeHora order by 1";
     echo getJsonData($query, 5);
 }
 
@@ -144,7 +144,7 @@ function getTablaTGDiarioSumTotal5(){
 // Ruta del maipo
 //funciones gestiones Ruta del maipo
 function getGestionesEjecutivosHora6() {
-    $query = "SELECT * FROM v_grx_gestionEjeHora order by 1";
+    $query = "SELECT * FROM v_grx_gestionejehora order by 1";
     echo getJsonData($query, 6);
 }
 
@@ -172,35 +172,35 @@ function getTablaTGDiarioSumTotal6(){
 // Salcobrand
 //funciones gestiones Salcobrand
 function getGestionesEjecutivosHora7() {
-    $query = "SELECT * FROM v_grx_gestionEjeHora order by 1";
+    $query = "SELECT * FROM v_grx_gestionejehora_salcobrand order by 1";
     echo getJsonData($query, 7);
 }
 
 function getTipoGestionesEjecutivos7() {
-    $query = "SELECT * FROM v_tabla_tipogestion_ejec_diario_totales order by 1";
+    $query = "SELECT * FROM v_tabla_tipogestion_ejec_diario_totales_salcobrand order by 1";
     echo getJsonData($query, 7);
 }
 
 //Funciones Tablas
 function getTablaGestionesEjecutivosHora7(){
-    $query = "SELECT * FROM v_gest_ejec_hora";
+    $query = "SELECT * FROM v_gest_ejec_hora_salcobrand";
     return getJsonData($query, 7);
 }
 
 function getTablaTGDiarioTotal7(){
-    $query = "SELECT * FROM v_tabla_tipogestion_ejec_diario";
+    $query = "SELECT * FROM v_tabla_tipogestion_ejec_diario_salcobrand";
     return getJsonData($query, 7);
 };
 
 function getTablaTGDiarioSumTotal7(){
-    $query = "SELECT sum(ct) as ct, sum(te) as te, sum(nc) as nc, sum(cp) as cp, sum(total) as total from v_tabla_tipogestion_ejec_diario";
+    $query = "SELECT sum(ct) as ct, sum(te) as te, sum(nc) as nc, sum(cp) as cp, sum(total) as total from v_tabla_tipogestion_ejec_diario_salcobrand";
     return getJsonData($query, 7);
 };
 
 // Santander
 //funciones gestiones Santander
 function getGestionesEjecutivosHora8() {
-    $query = "SELECT * FROM v_grx_gestionEjeHora order by 1";
+    $query = "SELECT * FROM v_grx_gestionejehora order by 1";
     echo getJsonData($query, 8);
 }
 
@@ -228,7 +228,7 @@ function getTablaTGDiarioSumTotal8(){
 // Abcdin
 //funciones gestiones Abcdin
 function getGestionesEjecutivosHora9() {
-    $query = "SELECT * FROM v_grx_gestionEjeHora order by 1";
+    $query = "SELECT * FROM v_grx_gestionejehora order by 1";
     echo getJsonData($query, 9);
 }
 
