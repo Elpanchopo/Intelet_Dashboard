@@ -1,74 +1,8 @@
 <?php
   // Incluir el archivo datos.php utilizando include
-  require_once __DIR__ . '/../models/functions.php';
+  require_once __DIR__ . '/../models/santander_fx.php';
   include 'header.php';
 ?>
-
-<style>
-
-.dropdown {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-.dropdown-last {
-  background-color: #777;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  outline: none;
-  border-radius: 0px 0px 10px 10px
-}
-
-.active,
-.dropdown:hover {
-  background-color: #555;
-}
-
-.dropdown::after {
-  content: '\002B';
-  color: white;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.active::after {
-  content: "\2212";
-  color: white;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.dropdown-content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease-out;
-  background-color: #f1f1f1;
-}
-#download {
-  float: right;
-  background-color: #777;
-  color: white;
-  padding: 18px;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  text-decoration: none;
-}
-#download:hover {
-  background-color: #555;
-}
-</style>
 
 <main>
   <div class="title">

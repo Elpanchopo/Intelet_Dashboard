@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <link rel="icon" type="image/x-icon" href="../assets/img/icons/favicon.ico">
   <meta charset="UTF-8">
@@ -35,31 +35,31 @@
   <nav>
     <ul>
       <li>
-        <a href="avn.php" data-title="Projects">AVN</a>
+        <a href="avn.php" data-title="AVN">AVN</a>
       </li>
       <li>
-        <a href="consumer.php" data-title="Projects">Consumer</a>
+        <a href="consumer.php" data-title="Consumer">Consumer</a>
       </li>
       <li>
-        <a href="entel.php" data-title="Proyects">Entel</a>
+        <a href="entel.php" data-title="Entel">Entel</a>
       </li>
       <li>
-        <a href="forum.php" data-title="Proyects">Forum</a>
+        <a href="forum.php" data-title="Forum">Forum</a>
       </li>
       <li>
-        <a href="globalvia.php" data-title="Proyects">Globalvia</a>
+        <a href="globalvia.php" data-title="GlobalVia">Globalvia</a>
       </li>
       <li>
-        <a href="salcobran.php" data-title="Proyects">Salcobrand</a>
+        <a href="salcobran.php" data-title="Salcobrand">Salcobrand</a>
       </li>
       <li>
-        <a href="rutamaipo.php" data-title="Proyects">Ruta del maipo</a>
+        <a href="rutamaipo.php" data-title="Ruta del Maipo">Ruta del maipo</a>
       </li>
       <li>
-        <a href="santander.php" data-title="Proyects">Santander</a>
+        <a href="santander.php" data-title="Santander">Santander</a>
       </li>
       <li>
-        <a href="abcdin.php" data-title="Proyects">Abcdin</a>
+        <a href="abcdin.php" data-title="Abcdin">Abcdin</a>
       </li>
     </ul>
   </nav>
@@ -67,3 +67,71 @@
 
 
 <!-- page content -->
+
+<!-- Style --> 
+
+<style>
+
+.dropdown {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+.dropdown-last {
+  background-color: #777;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0px 0px 10px 10px
+}
+
+.active,
+.dropdown:hover {
+  background-color: #555;
+}
+
+.dropdown::after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active::after {
+  content: "\2212";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.dropdown-content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-out;
+  background-color: #f1f1f1;
+}
+#download {
+  float: right;
+  background-color: #777;
+  color: white;
+  padding: 18px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  text-decoration: none;
+}
+#download:hover {
+  background-color: #555;
+}
+</style>
