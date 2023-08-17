@@ -9,7 +9,41 @@
       <h2>AVN</h2>
       <a href="javascript:void(0);">Hello Bob !</a>
   </div>
-
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card">
+      <img src="https://media.istockphoto.com/id/903568822/es/foto/llamar-a-los-trabajadores-del-centro.jpg?s=612x612&w=0&k=20&c=1YwT2DTu3WulREPVtUAEDS8W3gn_s5foVI3rFgOYZlk=" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+      <div class="card-body">
+        <h5 class="card-title">Clientes por contactar</h5>
+        <p class="card-text">
+          This is a longer card with supporting text below as a natural lead-in to
+          additional content. This content is a little bit longer.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://st2.depositphotos.com/2288675/10311/i/450/depositphotos_103113358-stock-photo-headset-on-a-laptop-computer.jpg" class="card-img-top" alt="Palm Springs Road"/>
+      <div class="card-body">
+        <h5 class="card-title">Clientes Contactados</h5>
+        <p class="card-text">
+          This is a longer card with supporting text below as a natural lead-in to
+          additional content. This content is a little bit longer.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://media.istockphoto.com/id/1331493599/photo/shot-of-a-businessman-using-a-computer-while-working-in-a-call-center.jpg?s=612x612&w=0&k=20&c=ocaFzVRnDARFnANjyd6CMrwAI0Ua6I0Na_MKej8IysA=" class="card-img-top" alt="Los Angeles Skyscrapers"/>
+      <div class="card-body">
+        <h5 class="card-title">Gestion diaria promedio</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- Contenedor para todos los graficos -->
   <div class="container mt-5">
