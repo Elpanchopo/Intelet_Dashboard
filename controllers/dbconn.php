@@ -21,7 +21,7 @@ function conectarDB($nConn) {
             $connString = $conexiones['forum'];
             break;
         case 5:
-            $connString = $conexiones['globalvida'];
+            $connString = $conexiones['globalvia'];
             break;
         case 6:
             $connString = $conexiones['rutasmaipo'];

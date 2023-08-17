@@ -27,6 +27,8 @@
                 <canvas id="miGrafico" style="width: 100%; height: 300px; margin: auto;"></canvas>
 
                 <!-- javascript que genera grafico 1 -->
+
+
                 <script>
                   var datos = <?php getGestionesEjecutivosHora5(); ?> ;
                   // parametros del constructor:
