@@ -29,49 +29,30 @@ function getTablaTGDiarioSumTotal(){
     return getJsonData($query, 1);
 }
 
-function getTotalGestiones(){
-    $query = "SELECT COUNT(rut) AS \"rut_total\" FROM planificacion_tag;";
-}
+// Funcion que consulta la vista con los valores de las tarjetas y retorna un ARRAY para asignarlo en la vista
+function getCardsData() {
+    $query = "SELECT * FROM v_cards_test";
 
-function getGestionesTotalesMes(){
-    $query = <<<EOT
-    "SELECT
-    c2
-    FROM (
-        SELECT 
-            (SELECT COUNT(pt.rut) AS "rut_total" FROM planificacion_tag pt) AS c1,
-            (SELECT COUNT(DISTINCT g.rut_num) AS "tocados" 
-            FROM gestiones g 
-            WHERE (g.fecha_gestion >= DATE_TRUNC('month', CURRENT_DATE) AND g.fecha_gestion < CURRENT_DATE) 
-            AND ranking = 'CT') AS c2,
-            COUNT(*) AS cnt_dias
-        FROM (
-            SELECT DISTINCT fecha_gestion::date
-            FROM gestiones g
-            WHERE g.fecha_gestion >= DATE_TRUNC('month', CURRENT_DATE) AND g.fecha_gestion < CURRENT_DATE
-        ) AS tmp2
-    ) AS tmp;"
-    EOT;
+    $json_resp = getJsonData($query, 1);
+    
+    $keysToSearch = ['c1', 'c2', 'c3', 'c4'];
+    $values = [];
+
+    foreach ($keysToSearch as $key) {
+        $startPos = strpos($json_resp, "\"$key\":");
+        if ($startPos !== false) {
+            $startPos += strlen("\"$key\":");
+            $endPos = strpos($json_resp, ",", $startPos);
+            if ($endPos === false) {
+                $endPos = strpos($json_resp, "}", $startPos);
+            }
+            if ($endPos !== false) {
+                $value = substr($json_resp, $startPos, $endPos - $startPos);
+                $values[$key] = trim($value, "\" ");
+            }
+        }
     }
 
+    return $values;
+}
 
-// //  Query datos a presentar.  
-// SELECT
-// c1,
-// c2,
-// (c2 / cnt_dias) AS c3,
-// ROUND((c2 / c1::numeric) * 100, 2) || '%' AS c4
-// FROM (
-// SELECT 
-//     (SELECT COUNT(pt.rut) AS "rut total" FROM planificacion_tag pt) AS c1,
-//     (SELECT COUNT(DISTINCT g.rut_num) AS "tocados" 
-//      FROM gestiones g 
-//      WHERE (g.fecha_gestion >= DATE_TRUNC('month', CURRENT_DATE) AND g.fecha_gestion < CURRENT_DATE) 
-//      AND ranking = 'CT') AS c2,
-//     COUNT(*) AS cnt_dias
-// FROM (
-//     SELECT DISTINCT fecha_gestion::date
-//     FROM gestiones g
-//     WHERE g.fecha_gestion >= DATE_TRUNC('month', CURRENT_DATE) AND g.fecha_gestion < CURRENT_DATE
-// ) AS tmp2
-// ) AS tmp;
