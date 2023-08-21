@@ -30,15 +30,16 @@ function getTablaTGDiarioSumTotal(){
 }
 
 function getTotalGestiones(){
-    $query = "SELECT COUNT(pt.rut) AS "rut total" FROM planificacion_tag pt" 
+    $query = "SELECT COUNT(rut) AS \"rut_total\" FROM planificacion_tag;";
 }
 
 function getGestionesTotalesMes(){
-    $query = "SELECT
+    $query = <<<EOT
+    "SELECT
     c2
     FROM (
         SELECT 
-            (SELECT COUNT(pt.rut) AS "rut total" FROM planificacion_tag pt) AS c1,
+            (SELECT COUNT(pt.rut) AS "rut_total" FROM planificacion_tag pt) AS c1,
             (SELECT COUNT(DISTINCT g.rut_num) AS "tocados" 
             FROM gestiones g 
             WHERE (g.fecha_gestion >= DATE_TRUNC('month', CURRENT_DATE) AND g.fecha_gestion < CURRENT_DATE) 
@@ -50,26 +51,27 @@ function getGestionesTotalesMes(){
             WHERE g.fecha_gestion >= DATE_TRUNC('month', CURRENT_DATE) AND g.fecha_gestion < CURRENT_DATE
         ) AS tmp2
     ) AS tmp;"
+    EOT;
     }
 
 
-//  Query datos a presentar.  
-SELECT
-c1,
-c2,
-(c2 / cnt_dias) AS c3,
-ROUND((c2 / c1::numeric) * 100, 2) || '%' AS c4
-FROM (
-SELECT 
-    (SELECT COUNT(pt.rut) AS "rut total" FROM planificacion_tag pt) AS c1,
-    (SELECT COUNT(DISTINCT g.rut_num) AS "tocados" 
-     FROM gestiones g 
-     WHERE (g.fecha_gestion >= DATE_TRUNC('month', CURRENT_DATE) AND g.fecha_gestion < CURRENT_DATE) 
-     AND ranking = 'CT') AS c2,
-    COUNT(*) AS cnt_dias
-FROM (
-    SELECT DISTINCT fecha_gestion::date
-    FROM gestiones g
-    WHERE g.fecha_gestion >= DATE_TRUNC('month', CURRENT_DATE) AND g.fecha_gestion < CURRENT_DATE
-) AS tmp2
-) AS tmp;
+// //  Query datos a presentar.  
+// SELECT
+// c1,
+// c2,
+// (c2 / cnt_dias) AS c3,
+// ROUND((c2 / c1::numeric) * 100, 2) || '%' AS c4
+// FROM (
+// SELECT 
+//     (SELECT COUNT(pt.rut) AS "rut total" FROM planificacion_tag pt) AS c1,
+//     (SELECT COUNT(DISTINCT g.rut_num) AS "tocados" 
+//      FROM gestiones g 
+//      WHERE (g.fecha_gestion >= DATE_TRUNC('month', CURRENT_DATE) AND g.fecha_gestion < CURRENT_DATE) 
+//      AND ranking = 'CT') AS c2,
+//     COUNT(*) AS cnt_dias
+// FROM (
+//     SELECT DISTINCT fecha_gestion::date
+//     FROM gestiones g
+//     WHERE g.fecha_gestion >= DATE_TRUNC('month', CURRENT_DATE) AND g.fecha_gestion < CURRENT_DATE
+// ) AS tmp2
+// ) AS tmp;
