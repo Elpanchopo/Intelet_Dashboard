@@ -16,8 +16,8 @@ class Grafico {
       var ctx = document.getElementById(this.elementoId).getContext('2d');
   
       var gradient = ctx.createLinearGradient(0, 0, 0, 400);
-      gradient.addColorStop(0, 'rgba(221, 0, 0, 1)');
-      gradient.addColorStop(1, 'rgba(59, 27, 111, 1)');
+      gradient.addColorStop(0, 'rgba(20, 66, 249, 0.8)');
+      gradient.addColorStop(1, 'rgba(178, 192, 249, 0.8)');
   
       var miGrafico = new Chart(ctx, {
         type: 'bar',

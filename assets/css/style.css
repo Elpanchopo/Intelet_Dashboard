@@ -129,6 +129,8 @@ header {
       &:nth-child(7) a:before {content:"\268f";}
       &:nth-child(8) a:before {content:"\268f";}
       &:nth-child(9) a:before {content:"\268f";}
+      &:nth-child(10) a:before {content:"\268f";}
+      &:nth-child(11) a:before {content:"\268f";}
   }
 }
 

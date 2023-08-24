@@ -1,17 +1,16 @@
 <?php
   // Incluir el archivo datos.php utilizando include
-  require_once __DIR__ . '/../models/forum_fx.php';
+  require_once __DIR__ . '/../models/entel_hogar_fx.php';
   include 'header.php';
 ?>
 
-<!-- Creo un arreglo y lo inicializo asignandole el arreglo que me retorna la funcion getCardsData() -->
 <?php
   $cardsArr = getCardsData();
 ?>
 
 <main>
   <div class="title">
-      <h2>Forum</h2>
+      <h2>Entel hogar</h2>
       <a href="javascript:void(0);">Hello Bob !</a>
   </div>
 
@@ -79,7 +78,7 @@
 
                 <!-- javascript que genera grafico 1 -->
                 <script>
-                  var datos = <?php getGestionesEjecutivosHora4(); ?> ;
+                  var datos = <?php getGestionesEjecutivosHora3(); ?> ;
                   // parametros del constructor:
                   //datos, etiquetas, valores, id canvas, titulo del grafico, eje x, eje y
                   var g1 = new Grafico(datos, datos.map(obj => obj.bloque_horario), datos.map(obj => obj.total), 'miGrafico', 'Gestiones por Hora', 'Bloque horario', 'Gestiones realizadas');
@@ -104,7 +103,7 @@
           <div class="table-responsive">
 
             <?php 
-              $json_data = getTablaGestionesEjecutivosHora4(); // Traigo el json de la consulta
+              $json_data = getTablaGestionesEjecutivosHora3(); // Traigo el json de la consulta
               
               $datos = json_decode($json_data, true);
 
@@ -185,7 +184,7 @@
                 
                 <!-- javascript que genera grafico 2 -->
                 <script>
-                  var datos = <?php getTipoGestionesEjecutivos4(); ?>;
+                  var datos = <?php getTipoGestionesEjecutivos3(); ?>;
                   // parametros del constructor:
                   //datos, etiquetas, valores, id canvas, titulo del grafico, eje x, eje y
                   var g2 = new Grafico(datos, datos.map(obj => obj.tg), datos.map(obj => obj.total), 'miGrafico2', 'Gestiones realizadas', 'Tipos de gestion', 'Gestiones realizadas');
@@ -204,10 +203,10 @@
           <div class="table-responsive">
             
           <?php 
-              $json_data = getTablaTGDiarioTotal4(); // Traigo el json de la consulta
+              $json_data = getTablaTGDiarioTotal3(); // Traigo el json de la consulta
               $datos = json_decode($json_data, true);
 
-              $json_data = getTablaTGDiarioSumTotal4(); // Traigo el json de la consulta totales por TG
+              $json_data = getTablaTGDiarioSumTotal3(); // Traigo el json de la consulta totales por TG
               $datosTG = json_decode($json_data, true);
               if (!empty($datos)) {
                 

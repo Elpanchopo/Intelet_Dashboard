@@ -8,7 +8,6 @@
 <?php
   $cardsArr = getCardsData();
 ?>
-
 <main>
   <div class="title">
       <h2>AVN</h2>
@@ -19,7 +18,7 @@
     <div class="card">
       <img class="card-img-top" src="../assets/img/card1.jpg" alt="imagen callcent">
       <div class="card-body">
-        <h5 class="card-title">Rut por contactar</h5>
+        <h5 class="card-title">Total asignación</h5>
         <p class="card-text">
           <?php 
             echo $cardsArr['c1']; //Imprimo el valor de c1 del arreglo
@@ -41,21 +40,21 @@
     <div class="card">
       <img class="card-img-top" src="../assets/img/card3.webp" alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title">Promedio contacto diario</h5>
+        <h5 class="card-title">Porcentaje contacto titular</h5>
         <p class="card-text">
           <?php 
-            echo $cardsArr['c3']; //Imprimo el valor de c3 del arreglo
+            echo $cardsArr['c4']; //Imprimo el valor de c3 del arreglo
           ?>
         </p>
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="../assets/img/card3.webp" alt="Card image cap">
+      <img class="card-img-top" src="../assets/img/card4.jpg" alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title">Porcentaje contacto exitoso</h5>
+        <h5 class="card-title">Promedio contacto diario</h5>
         <p class="card-text">
           <?php 
-            echo $cardsArr['c4']; //Imprimo el valor de c4 del arreglo
+            echo $cardsArr['c3']; //Imprimo el valor de c4 del arreglo
           ?>
         </p>
       </div>
@@ -69,7 +68,7 @@
   <div class="container mt-5">
 
     <!-- elemento 1 -->
-    <button style="border-radius: 10px 0px 0px 0px" class="dropdown">Gestiones diarias por hora</button>
+    <button style="border-radius: 10px 10px 0px 0px" class="dropdown">Gestiones diarias por hora</button>
     <div class="dropdown-content" style="background-color: white!important;">
       <div class="row">
         <div class="col-12">
@@ -171,7 +170,7 @@
 
 
     <!-- elemento 2 -->
-    <button style="border-radius: 0px 0px 0px 0px" class="dropdown">Tipos de Gestiones diarias por ejecutivos</button>
+    <button style="border-radius: 0px 0px 10px 10px" class="dropdown">Tipos de Gestiones diarias por ejecutivos</button>
     <div class="dropdown-content" style="background-color: white!important;">
       <div class="row">
         <div class="col-12">

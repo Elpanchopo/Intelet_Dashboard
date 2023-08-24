@@ -4,12 +4,64 @@
   include 'header.php';
 ?>
 
+<!-- Creo un arreglo y lo inicializo asignandole el arreglo que me retorna la funcion getCardsData() -->
+<?php
+  $cardsArr = getCardsData();
+?>
+
 <main>
   <div class="title">
       <h2>Consumer</h2>
       <a href="javascript:void(0);">Hello Bob !</a>
   </div>
 
+  <div class="card-deck" style="margin-right: 0px !important;margin-left: 0px !important;margin-top: 15px !important;">
+    <div class="card">
+      <img class="card-img-top" src="../assets/img/card1.jpg" alt="imagen callcent">
+      <div class="card-body">
+        <h5 class="card-title">Total asignación</h5>
+        <p class="card-text">
+          <?php 
+            echo $cardsArr['c1']; //Imprimo el valor de c1 del arreglo
+          ?>
+          </p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="../assets/img/card2.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Contactados</h5>
+        <p class="card-text">
+          <?php 
+            echo $cardsArr['c2']; //Imprimo el valor de c2 del arreglo
+          ?>
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="../assets/img/card3.webp" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Porcentaje contacto titular</h5>
+        <p class="card-text">
+          <?php 
+            echo $cardsArr['c4']; //Imprimo el valor de c3 del arreglo
+          ?>
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="../assets/img/card4.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Promedio contacto diario</h5>
+        <p class="card-text">
+          <?php 
+            echo $cardsArr['c3']; //Imprimo el valor de c4 del arreglo
+          ?>
+        </p>
+      </div>
+    </div>
+
+  </div>
 
   <!-- Contenedor para todos los graficos -->
   <div class="container mt-5">

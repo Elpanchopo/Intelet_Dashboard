@@ -41,7 +41,13 @@
         <a href="consumer.php" data-title="Consumer">Consumer</a>
       </li>
       <li>
-        <a href="entel.php" data-title="Entel">Entel</a>
+        <a href="entel_movil.php" data-title="Entel_fibra">Entel movil</a>
+      </li>
+      <li>
+        <a href="entel_fibra.php" data-title="Entel_fibra">Entel fibra</a>
+      </li>
+      <li>
+        <a href="entel_hogar.php" data-title="Entel_fibra">Entel hogar</a>
       </li>
       <li>
         <a href="forum.php" data-title="Forum">Forum</a>
