@@ -2,7 +2,7 @@
 require_once 'dbconn.php';
 
 
-//session_start();
+session_start();
 
 function getJsonData($consulta, $nConn) { 
     $conexion = conectarDB($nConn);

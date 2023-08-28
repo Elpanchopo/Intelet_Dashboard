@@ -12,7 +12,11 @@
 <main>
   <div class="title">
       <h2>Abcdin</h2>
-      <a href="javascript:void(0);">Hello Bob !</a>
+      <a>
+    <?php
+      echo $_SESSION['nnombre_usuario']
+    ?>
+    </a>
   </div>
   <div class="card-deck" style="margin-right: 0px !important;margin-left: 0px !important;margin-top: 15px !important;">
     <div class="card">

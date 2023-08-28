@@ -8,8 +8,9 @@ require_once __DIR__ . '/models/login_fx.php';
 
 //check sesión
 if(isset($_SESSION['ncodigo_usuario'])){
-    echo $_SESSION['ncodigo_usuario'];
-    //header("Location: /Intelet_Dashboard/views");
+    // echo $_SESSION['ncodigo_usuario'];
+    header("Location: /dashboard/views");
+    exit;
 } else {
     echo 'No hay sesión activa :C';
     //redireccionar al login principal
