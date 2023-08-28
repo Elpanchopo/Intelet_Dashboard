@@ -35,6 +35,9 @@ function conectarDB($nConn) {
         case 9:
             $connString = $conexiones['abcdin'];
             break;
+        case 10:
+            $connString = $conexiones['login'];
+            break;
         default:
             $connString = '';
             break;

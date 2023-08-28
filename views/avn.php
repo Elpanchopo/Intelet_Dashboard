@@ -18,12 +18,14 @@
     <div class="card">
       <img class="card-img-top" src="../assets/img/card1.jpg" alt="imagen callcent">
       <div class="card-body">
-        <h5 class="card-title">Total asignación</h5>
-        <p class="card-text">
-          <?php 
+        <h4 class="card-title"> 
+        <?php 
             echo $cardsArr['c1']; //Imprimo el valor de c1 del arreglo
           ?>
-          </p>
+        </h4>
+        <p class="card-text">
+          Total Asognación
+        </p>
       </div>
     </div>
     <div class="card">

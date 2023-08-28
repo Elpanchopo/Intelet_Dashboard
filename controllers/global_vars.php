@@ -10,5 +10,6 @@ $conexiones = [
     'rutasmaipo' => 'host=192.168.1.200 port=5432 dbname=intelet_bi_rutas_maipo user=bi_rutas_maipo password=X8cx&c&jIkD8clY*',
     'salcobran' => 'host=192.168.1.200 port=5432 dbname=intelet_bi user=bi_bi password=NlFAwtnM!jgVE*cr',
     'santander' => 'host=192.168.1.200 port=5432 dbname=intelet_bi_santander user=bi_santander password=%*Pkrlp8$kYdsgmU',
-    'abcdin' => 'host=192.168.1.200 port=5432 dbname=intelet_bi_abcdin user=bi_abcdin password=UvhgqLeELdeoSZ$H'
+    'abcdin' => 'host=192.168.1.200 port=5432 dbname=intelet_bi_abcdin user=bi_abcdin password=UvhgqLeELdeoSZ$H',
+    'login' => 'host=192.168.1.200 port=5432 dbname=intelet_shantal user=web password=D%)}7Ft~&K3Xh<F>'
 ];

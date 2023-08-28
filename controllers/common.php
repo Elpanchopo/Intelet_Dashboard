@@ -1,6 +1,9 @@
 <?php
 require_once 'dbconn.php';
 
+
+//session_start();
+
 function getJsonData($consulta, $nConn) { 
     $conexion = conectarDB($nConn);
     $query = $consulta;
@@ -8,6 +11,7 @@ function getJsonData($consulta, $nConn) {
     if (!$resultado) {
         die("Error en la consulta: " . pg_last_error($conexion));
     }
+
     $datos = array();
     while ($fila = pg_fetch_assoc($resultado)) {
         $datos[] = $fila;
