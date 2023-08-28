@@ -63,7 +63,7 @@ session_start();
         <a href="salcobran.php" data-title="Salcobrand">Salcobrand</a>
       </li>
       <li>
-        <a href="rutamaipo.php" data-title="Ruta del Maipo">Ruta del maipo</a>
+        <a href="rutaMaipo.php" data-title="Ruta del Maipo">Ruta del maipo</a>
       </li>
       <li>
         <a href="santander.php" data-title="Santander">Santander</a>

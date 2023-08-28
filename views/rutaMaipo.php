@@ -7,7 +7,7 @@
 <main>
   <div class="title">
       <h2>Ruta del maipo</h2>
-      <a href="javascript:void(0);">Hello Bob !</a>
+      <a><?php echo $_SESSION['nnombre_usuario']?></a>
   </div>
 
 
