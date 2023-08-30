@@ -48,7 +48,7 @@
   <!-- Contenedor para todos los graficos -->
   <div class="container mt-5">
     <!-- elemento 1 -->
-    <button style="border-radius: 10px 0px 0px 0px" class="dropdown">Gestiones diarias por hora</button>
+    <button style="border-radius: 10px 10px 0px 0px" class="dropdown">Gestiones diarias por hora</button>
     <div class="dropdown-content" style="background-color: white!important;">
       <div class="row">
         <div class="col-12">
@@ -150,7 +150,7 @@
 
 
     <!-- elemento 2 -->
-    <button style="border-radius: 0px 0px 0px 0px" class="dropdown">Tipos de Gestiones Realizadas</button>
+    <button style="border-radius: 0px 0px 10px 10px" class="dropdown">Tipos de Gestiones Realizadas</button>
     <div class="dropdown-content" style="background-color: white!important;">
       <div class="row">
         <div class="col-12">

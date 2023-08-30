@@ -39,37 +39,37 @@ session_start();
   <nav>
     <ul>
       <li>
+        <a href="abcdin.php" data-title="Abcdin">Abcdin</a>
+      </li>
+      <li>
         <a href="avn.php" data-title="AVN">AVN</a>
       </li>
       <li>
         <a href="consumer.php" data-title="Consumer">Consumer</a>
       </li>
       <li>
-        <a href="entel_movil.php" data-title="Entel_fibra">Entel movil</a>
-      </li>
-      <li>
         <a href="entel_fibra.php" data-title="Entel_fibra">Entel fibra</a>
       </li>
       <li>
-        <a href="entel_hogar.php" data-title="Entel_fibra">Entel hogar</a>
+        <a href="entel_hogar.php" data-title="Entel_hogar">Entel hogar</a>
+      </li>
+      <li>
+        <a href="entel_movil.php" data-title="Entel_movil">Entel movil</a>
       </li>
       <li>
         <a href="forum.php" data-title="Forum">Forum</a>
       </li>
       <li>
-        <a href="globalvia.php" data-title="GlobalVia">Globalvia</a>
-      </li>
-      <li>
-        <a href="salcobran.php" data-title="Salcobrand">Salcobrand</a>
+        <a href="globalvia.php" data-title="Globalvia">Globalvia</a>
       </li>
       <li>
         <a href="rutaMaipo.php" data-title="Ruta del Maipo">Ruta del maipo</a>
       </li>
       <li>
-        <a href="santander.php" data-title="Santander">Santander</a>
+        <a href="salcobran.php" data-title="Salcobrand">Salcobrand</a>
       </li>
       <li>
-        <a href="abcdin.php" data-title="Abcdin">Abcdin</a>
+        <a href="santander.php" data-title="Santander">Santander</a>
       </li>
     </ul>
   </nav>
