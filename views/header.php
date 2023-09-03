@@ -71,6 +71,9 @@ session_start();
       <li>
         <a href="santander.php" data-title="Santander">Santander</a>
       </li>
+      <li>
+        <a href="permisos.php" data-title="Permisos">Permisos</a>
+      </li>
     </ul>
   </nav>
 </header>
