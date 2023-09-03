@@ -22,6 +22,18 @@ function getJsonData($consulta, $nConn) {
     return $json;
 }
 
-
+function updateData($consulta, $nConn) {
+    $conexion = conectarDB($nConn);
+    $query = $consulta;
+    $resultado = pg_query($conexion, $query);
+    if (!$resultado) {
+        die("Error en la consulta: " . $consulta ." - ". pg_last_error($conexion));
+    }
+    if ($resultado) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 ?>
