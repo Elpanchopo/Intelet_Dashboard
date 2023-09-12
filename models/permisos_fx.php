@@ -24,3 +24,8 @@ function getUserList(){
                 usuario_id ASC";
     return getJsonData($query, 10);
 }
+
+function getUserPerms($idUser){
+    $query = "SELECT access FROM dashboard_privs WHERE id = $idUser";
+    return getJsonData($query, 10);
+}

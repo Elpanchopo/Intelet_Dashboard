@@ -1,5 +1,10 @@
 <?php
+require_once __DIR__ . '/../models/permisos_fx.php';
 session_start();
+
+$userId = $_SESSION['nid_usuario'];
+$jsonUserPerms = getUserPerms($userId);
+$perms = json_decode($jsonUserPerms,true);
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +42,7 @@ session_start();
 <header>
   <h1><a href="index.php">Dashboard</a></h1>
   <nav>
-    <ul>
+    <ul id="menu">
       <li>
         <a href="abcdin.php" data-title="Abcdin">Abcdin</a>
       </li>
@@ -68,9 +73,9 @@ session_start();
       <li>
         <a href="salcobran.php" data-title="Salcobrand">Salcobrand</a>
       </li>
-      <li>
+      <!-- <li>
         <a href="santander.php" data-title="Santander">Santander</a>
-      </li>
+      </li> -->
       <li>
         <a href="permisos.php" data-title="Permisos">Permisos</a>
       </li>
@@ -148,3 +153,5 @@ session_start();
   background-color: #555;
 }
 </style>
+
+
